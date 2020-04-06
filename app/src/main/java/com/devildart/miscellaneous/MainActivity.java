@@ -15,6 +15,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.devildart.miscellaneous.alarm_notification.AlarmNotificationService;
+import com.devildart.miscellaneous.dialogfragment.DialogBox;
+import com.devildart.miscellaneous.dialogfragment.DialogSubmitBtnCallback;
 
 import java.util.Calendar;
 
@@ -44,7 +46,18 @@ public class MainActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onClick(View view) {
-                /*DialogBox.getInstance(getSupportFragmentManager(), "Dialog Fragment", 2).showDialog();*/
+                /*DialogBox.getInstance(getSupportFragmentManager(), "Dialog Fragment", DialogBox.FULL_SCREEN_DIALOG)
+                        .setTitleStr("Successful")
+                        .setSubTitleStr("Documents has been signed and uploaded successfully. Please press okay to proceed.")
+                        .setSubmitBtnStr("Okay")
+                        .setStatusImageDrawable(R.drawable.payment_reminder)
+                        .setSubmitBtnCallback(new DialogSubmitBtnCallback() {
+                            @Override
+                            public void onClick() {
+
+                            }
+                        })
+                        .showDialog();*/
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     if (Settings.canDrawOverlays(MainActivity.this)) {
 
