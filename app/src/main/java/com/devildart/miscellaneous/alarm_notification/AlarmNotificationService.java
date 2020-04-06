@@ -36,6 +36,7 @@ public class AlarmNotificationService extends Service implements View.OnTouchLis
     public void onCreate() {
 
         super.onCreate();
+        Log.d("ROLG", "onCreate: ");
         windowManager = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
 
         addOverlayView();

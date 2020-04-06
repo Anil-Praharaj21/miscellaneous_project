@@ -42,7 +42,11 @@
 
         <service
             android:name=".alarm_notification.AlarmNotificationService"
-            android:enabled="true" />
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
